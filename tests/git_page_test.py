@@ -8,3 +8,4 @@ def test_request_git(client):
     assert b"<h1>Branches</h1>" in response.data
     assert b"<h1>Merge</h1>" in response.data
     assert b"<h1>Commit</h1>" in response.data
+    assert b"<h1>Tags</h1>" in response.data
