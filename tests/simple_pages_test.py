@@ -50,3 +50,12 @@ def test_request_page_not_found(client):
     """This makes the page not found page"""
     response = client.get("/page5")
     assert response.status_code == 404
+
+def test_request_carousel(client):
+    """This tests the carousel links"""
+    response = client.get("/")
+    assert response.status_code == 200
+    assert b'<a href="page1.html"' in response.data
+    assert b'<a href="page2.html"' in response.data
+    assert b'<a href="page3.html"' in response.data
+    assert b'<a href="page4.html"' in response.data
