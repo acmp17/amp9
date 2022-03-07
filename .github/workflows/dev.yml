@@ -1,6 +1,11 @@
 name: Development Workflow
 
 on:
+  push:
+    branches:
+      - 'amp9-dev'
+    tags:
+      - 'v*'
   pull_request:
     branches:
       - 'master'
