@@ -6,4 +6,3 @@ def test_request_docker(client):
     assert response.status_code == 200
     assert b"<h1>Docker</h1>" in response.data
     assert b"<h1>Containers</h1>" in response.data
-    """hey """
