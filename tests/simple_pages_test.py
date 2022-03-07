@@ -55,7 +55,7 @@ def test_request_carousel(client):
     """This tests the carousel links"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b'<a href="page1.html"' in response.data
-    assert b'<a href="page2.html"' in response.data
-    assert b'<a href="page3.html"' in response.data
-    assert b'<a href="page4.html"' in response.data
+    assert b'<a href="/page1"' in response.data
+    assert b'<a href="/page2"' in response.data
+    assert b'<a href="/page3"' in response.data
+    assert b'<a href="/page4"' in response.data
