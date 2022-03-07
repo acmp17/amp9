@@ -7,3 +7,4 @@ def test_request_docker(client):
     assert b"<h1>Docker</h1>" in response.data
     assert b"<h1>Containers</h1>" in response.data
     assert b"<h1>Images</h1>" in response.data
+    assert b'<a href="https://hub.docker.com/repository/docker/acmp17/project1-amp">Visit DockerHub Project Repository</a>' in response.data
