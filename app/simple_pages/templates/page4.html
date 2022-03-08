@@ -1,4 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
     Page 4
+    <h1>All about Continuous Integration and Deployment</h1>
+    <div class="text">
+        <h2>Continuous Integration</h2>
+            <p>Continuous Integration is the practice of testing each change done to your project and at an early efficient time.
+                Members of a team can utilize the process of collaborating on code which causes for multiple integrations in a single day.
+                This reduces problems from showing up when working.</p>
+        <h2>Continuous Deployment</h2>
+            <p>Continuous deployment is towards the end of the Continuous Integration process. It
+            automates the delivery of applications to selected infrastructure environments.</p>
+            <a href="https://www.martinfowler.com/bliki/ContinuousDelivery.html">“the current development version of the software can be deployed into production at a moment's notice” - Martin Fowler</a>
+            <p>GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline.
+                You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.</p>
+            <a href="https://www.martinfowler.com/articles/continuousIntegration.html"> “At any time a developer can make a controlled copy of the mainline onto their own machine, this is called 'checking out'.” -Martin Fowler </a>
+            <p>Since in both the dev.yml and prod.yml files I have pytest code running, it does a job whenever the changes in the project file triggers it. The pip install command always looks for the latest version of the package and installs it.
+                You can review code using a development server before merging pull requests by searching localhost on the web browser. You can deploy master to a production server by pushing to the prod branch from the yml file</p>
+    </div>
 {% endblock %}
