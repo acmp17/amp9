@@ -1,36 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
     Page 1
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <header>All About Git</header>
-                <h2>Git</h2>
-                    <p>Git is the most popular version control system in the world which makes it easier to track changes in a file.
-                        It is a great tool to coordinate with other developers and save checkpoints on what is changed over time.
-                        You can download Git by it’s command-line interface. Github is the website that is used for hosting the projects that use git.</p>
-                <h2>Branches</h2>
-                    <p>Branches that are being used in git are similar to how File > Save as.. In a text editor.
-                        The branch name is for reference of the current state of your project.
-                        One branch can be for working on a single feature and another branch can be for applying another feature</p>
-                <h2>Merge</h2>
-                    <p> The concept of merge lets you take the independent lines created by git branches and integrate them into a
-                    single branch (most likely the default branch). If someone makes changes to the master branch on git, you can
-                    do the merge command to update your local master branch. Merge conflicts occur when multiple people are making
-                    changes to the file on the same lines at the same time.
-                    Pull command is to fetch the information changed on the master branch and merge automatically to the local branch on the device.</p>
-                <h2>Commit</h2>
-                    <p>Commits are basically a capture of the project’s currently saved changes. These captures can be known as the “safe” versions of the project.
-                    The add command helps prepare the marked changes on the file before actually committing. Commit makes the changes on the local repository and
-                    then the push command sends the changes out to the remote location (Github). </p>
-                <h2>Tags</h2>
-                    <p>Tags are reference points in Git’s history. Unlike branches, it does not change and they don’t have a further history of commits after being created.
-                    Annotated tags store extra metadata information like a name and an extra message. Lightweight tags are bookmarks to a commit.
-                    It is either utilized for a name or specific pointers to a commit.</p>
-                <h2>Repositories</h2>
-                    <p>Repositories in git contain a collection of files of different version types in a project. These files are imported from repositories that are in the local server
-                    and the user can update and modify the contents in the file. After those changes are made, they can update the repository on the remote location. </p>
-            </div>
-        </div>
+    <h1>All About Git</h1>
+    <div class="text">
+        <h2>Git</h2>
+        <p>Git is the most popular version control system in the world which makes it easier to track changes in a file.
+            It is a great tool to coordinate with other developers and save checkpoints on what is changed over time.
+            You can download Git by it’s command-line interface. Github is the website that is used for hosting the
+            projects that use git.</p>
+        <h2>Branches</h2>
+        <p>Branches that are being used in git are similar to how File > Save as.. In a text editor.
+            The branch name is for reference of the current state of your project.
+            One branch can be for working on a single feature and another branch can be for applying another feature</p>
+        <h2>Merge</h2>
+        <p> The concept of merge lets you take the independent lines created by git branches and integrate them into a
+            single branch (most likely the default branch). If someone makes changes to the master branch on git, you
+            can
+            do the merge command to update your local master branch. Merge conflicts occur when multiple people are
+            making
+            changes to the file on the same lines at the same time.
+            Pull command is to fetch the information changed on the master branch and merge automatically to the local
+            branch on the device.</p>
+        <h2>Commit</h2>
+        <p>Commits are basically a capture of the project’s currently saved changes. These captures can be known as the
+            “safe” versions of the project.
+            The add command helps prepare the marked changes on the file before actually committing. Commit makes the
+            changes on the local repository and
+            then the push command sends the changes out to the remote location (Github). </p>
+        <h2>Tags</h2>
+        <p>Tags are reference points in Git’s history. Unlike branches, it does not change and they don’t have a further
+            history of commits after being created.
+            Annotated tags store extra metadata information like a name and an extra message. Lightweight tags are
+            bookmarks to a commit.
+            It is either utilized for a name or specific pointers to a commit.</p>
+        <h2>Repositories</h2>
+        <p>Repositories in git contain a collection of files of different version types in a project. These files are
+            imported from repositories that are in the local server
+            and the user can update and modify the contents in the file. After those changes are made, they can update
+            the repository on the remote location. </p>
     </div>
 {% endblock %}
