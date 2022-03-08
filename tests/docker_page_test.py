@@ -19,4 +19,4 @@ def test_docker_starter(client):
     """This tests the docker starter description"""
     response = client.get("/page2")
     assert response.status_code == 200
-    assert b"<h2>How to start a Project with Docker</h2>" in response.data
+    assert b"<h2>How to start A Project with Docker</h2>" in response.data
