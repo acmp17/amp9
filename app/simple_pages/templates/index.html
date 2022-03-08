@@ -3,43 +3,56 @@
     Index Page
 
         <!-- Carousel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    {% endblock %}
+
+</head>
+<body style="background-color:lightblue;">
+<div class="border border-dark mb-3" style="background-color:white;">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="/page1">
-                    <img class="d-block w-100" src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt="First slide">
-                </a>
+                <a href="/page1"> <img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" class="d-block" alt="..."> </a>
             </div>
+
             <div class="carousel-item">
-                <a href="/page2">
-                    <img class="d-block w-100" src="https://thingsolver.com/wp-content/uploads/docker-cover.png" alt="Second slide">
-                </a>
+                <a href="/page2"><img src="https://thingsolver.com/wp-content/uploads/docker-cover.png" class="d-block" alt="..."> </a>
             </div>
-            <div class="carousel-item active">
-                <a href="/page3">
-                    <img class="d-block w-100" src="https://miro.medium.com/max/640/1*XzIRJGujfqAiOV2EIQgR_Q.png" alt="Third slide">
-                </a>
+
+            <div class="carousel-item">
+                <a href="/page3"><img src="https://miro.medium.com/max/640/1*XzIRJGujfqAiOV2EIQgR_Q.png" class="d-block" alt="..."></a>
             </div>
-            <div class="carousel-item active">
-                <a href="/page4">
-                    <img class="d-block w-100" src="https://www.xenonstack.com/hubfs/xenonstack-continuous-integration-and-continuous-delivery.png" alt="Fourth slide">
-                </a>
+
+            <div class="carousel-item">
+                <a href="/page4"><img src="https://www.xenonstack.com/hubfs/xenonstack-continuous-integration-and-continuous-delivery.png" class="d-block" alt="..."></a>
             </div>
+
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-        </a>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+</div>
 
 {% endblock %}
 
