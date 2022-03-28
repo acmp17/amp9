@@ -46,6 +46,12 @@ def test_request_page5(client):
     assert response.status_code == 200
     assert b"Object Oriented Programming Terms" in response.data
 
+def test_request_page5(client):
+    """This makes the page6"""
+    response = client.get("/page6")
+    assert response.status_code == 200
+    assert b"AAA" in response.data
+
 def test_request_page_not_found(client):
     """This makes the page not found page"""
     response = client.get("/page10")
