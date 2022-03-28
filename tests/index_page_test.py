@@ -1,4 +1,8 @@
-{% extends "base.html" %}
+def test_index_page_content(client):
+    """This tests the content on the index.html page"""
+    response = client.get("/")
+    assert response.status_code == 200
+    assert b"""{% extends "base.html" %}
 {% block content %}
     <!-- Carousel -->
     <!doctype html>
@@ -69,3 +73,4 @@
     </body>
 {% endblock %}
 
+""" in response.data
