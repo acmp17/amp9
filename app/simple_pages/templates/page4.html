@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pylint & Others</title>
+    </head>
+    <body>
     <h1>All about Continuous Integration and Deployment</h1>
     <div class="text">
         <h2>Continuous Integration</h2>
@@ -16,4 +23,6 @@
             <p>Since in both the dev.yml and prod.yml files I have pytest code running, it does a job whenever the changes in the project file triggers it. The pip install command always looks for the latest version of the package and installs it.
                 You can review code using a development server before merging pull requests by searching localhost on the web browser. You can deploy master to a production server by pushing to the prod branch from the yml file</p>
     </div>
+    </body>
+    </html>
 {% endblock %}
