@@ -13,31 +13,31 @@ def test_request_index(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b"Alianna Panganiban" in response.data
+    assert b"" in response.data
 
 def test_request_page1(client):
     """This makes the page1"""
     response = client.get("/page1")
     assert response.status_code == 200
-    assert b"Page 1" in response.data
+    assert b"Git" in response.data
 
 def test_request_page2(client):
     """This makes the page2"""
     response = client.get("/page2")
     assert response.status_code == 200
-    assert b"Page 2" in response.data
+    assert b"Docker" in response.data
 
 def test_request_page3(client):
     """This makes the page3"""
     response = client.get("/page3")
     assert response.status_code == 200
-    assert b"Page 3" in response.data
+    assert b"Python/Flask" in response.data
 
 def test_request_page4(client):
     """This makes the page4"""
     response = client.get("/page4")
     assert response.status_code == 200
-    assert b"Page 4" in response.data
+    assert b"Continuous Integration and Deployment" in response.data
 
 def test_request_page_not_found(client):
     """This makes the page not found page"""
