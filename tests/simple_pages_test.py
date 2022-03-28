@@ -41,7 +41,7 @@ def test_request_page4(client):
 
 def test_request_page_not_found(client):
     """This makes the page not found page"""
-    response = client.get("")
+    response = client.get("/page10")
     assert response.status_code == 404
 
 def test_request_carousel(client):
