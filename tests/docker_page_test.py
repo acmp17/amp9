@@ -5,6 +5,15 @@ def test_docker_page_content(client):
     """This confirms content on the docker page"""
     response = client.get("/page2")
     assert response.status_code == 200
+    assert b"""<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Docker</title>
+    </head>
+    <body>""" in response.data
+    assert b"<h1>All About Docker</h1>" in response.data
+    assert b'<div class="text">' in response.data
     assert b"<h2>Docker</h2>" in response.data
     assert b"""<p>Docker is an open source containerization platform that lets developers package applications into containers.
             It helps build, run, and manage containers on servers and the cloud. It allows developers to take advantage
