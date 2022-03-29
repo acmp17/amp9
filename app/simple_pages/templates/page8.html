@@ -1,36 +1,56 @@
 {% extends "base.html" %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SOLID</title>
-</head>
-<body>
-    <h1>SOLID</h1>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SOLID</title>
+    </head>
+    <body>
+    <h1>SOLID article</h1>
     <div class="text">
         <p>class Calculator:<br>
             """ This is the default result property"""<br>
-    result = 0<br>
+            result = 0<br>
 
-    def add(self, value_1):
-        """ This is the add method"""
-        self.result = self.result + value_1
-        return self.result
+            def add(self, value_1):<br>
+            """ This is the add method"""<br>
+            self.result = self.result + value_1<br>
+            return self.result<br>
 
-    def subtract(self, value_1):
-        """ This is the subtract method"""
-        self.result = self.result - value_1
-        return self.result
+            def subtract(self, value_1):<br>
+            """ This is the subtract method"""<br>
+            self.result = self.result - value_1<br>
+            return self.result<br>
 
-    def get_result(self):
-        """ This is the get result method"""
-        return self.result</p>
-        <h2>Single-Responsibility Principle</h2>
+            def get_result(self):<br>
+            """ This is the get result method"""<br>
+            return self.result</p>
+        <h2>Single-Responsibility Principle (SRP)</h2>
         <p>being able to split the operations of the code into subparts and making a single function class, main.
-        The main class will call all the other functions one-by-one during a step by step process.</p>
-        <h2>The Open-Closed Principle</h2>
-        <p>Creating new method functions should add an extension to the main class</p>
+            The main class will call all the other functions one-by-one during a step by step process.</p>
+        <h2>The Open-Closed Principle (OCP)</h2>
+        <p>Creating new method functions should add an extension to the main class. One can add on to the subclasses'
+            functions,
+            then making simple modifications to the main.</p>
+        <h2>The Liskov Substitution Principle (LSP)</h2>
+        <p>There should not be a noticeable difference between the functions of the base class so the user can expect
+            the same behavior. </p>
+        <h2>The Interface Segregation Principle (ISP)</h2>
+        <p>Keep the content of a subclass clean from elements of no use to that subclass in order to have classes clean
+            and minimize mistakes</p>
+        <h2>The Dependency Inversion Principle (DIP)</h2>
+        <p>adding a third abstraction that takes info as input and passes it to the others. Example: operations
+            folder</p>
+        <h2>Design Patterns</h2>
+        <p>Structural design patterns are about organizing different classes and objects to form larger structures and
+            provide new functionality while keeping these structures flexible and efficient.</p>
+        <p>Creational patterns provides essential information regarding the Class instantiation or the object
+            instantiation.</p>
+        <p>Behavioral patterns are all about identifying the common communication patterns between objects and realize
+            these patterns. These patterns are concerned with algorithms and the assignment of responsibilities between
+            objects.</p>
     </div>
-</body>
-</html>
+    </body>
+    </html>
+{% endblock %}
