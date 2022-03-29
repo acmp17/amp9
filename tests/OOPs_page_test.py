@@ -1,32 +1,17 @@
-{% extends "base.html" %}
-{% block content %}
-    <!DOCTYPE html>
+def test_OOPs_page_content(client):
+    """This confirms content on the OOPs page"""
+    response = client.get("/page7")
+    assert response.status_code == 200
+    assert b"""<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>OOPs</title>
     </head>
-    <body>
-    <h1>Object Oriented Programming</h1>
-    <div class="text">
-        <p>class Calculator:<br>
-            """ This is the default result property"""<br>
-            result = 0<br>
-
-            def add(self, value_1):<br>
-            """ This is the add method"""<br>
-            self.result = self.result + value_1<br>
-            return self.result<br>
-
-            def subtract(self, value_1):<br>
-            """ This is the subtract method"""<br>
-            self.result = self.result - value_1<br>
-            return self.result<br>
-
-            def get_result(self):<br>
-            """ This is the get result method"""<br>
-            return self.result</p>
-        <h2>Encapsulation</h2>
+    <body>""" in response.data
+    assert b"<h1>Object Oriented Programming</h1>" in response.data
+    assert b'<div class="text">' in response.data
+    assert b"""<h2>Encapsulation</h2>
         <p>restrict access to methods and variables that are inside the class. Modifications from outside of the class
             cannot be made so to change the value we would have to use a setter function to take the value as a
             parameter. The self.result value is restricted only to modifications within the class as it is
@@ -47,9 +32,8 @@
             implementation, but the inner workings are hidden in order to reduce complexity. The base class of
             calculator
             did not need critical modifications, but the operation derived classes are what have the complex
-            functionality </p>
-        <a href="https://www.programiz.com/python-programming/object-oriented-programming"> Python Object Oriented Programming</a>
-    </div>
-    </body>
-    </html>
-{% endblock %}
+            functionality </p>""" in response.data
+    assert b'<a href="https://www.programiz.com/python-programming/object-oriented-programming"> Python Object Oriented Programming</a>' in response.data
+    assert b"</div>" in response.data
+    assert b"</body>" in response.data
+    assert b"</html>" in response.data
