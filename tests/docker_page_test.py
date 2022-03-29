@@ -21,7 +21,9 @@ def test_docker_page_content(client):
             They represent an application in its virtual environment during specific points in time.
             Images are like templates as base to build a container, which basically runs the image.</p>""" in response.data
     assert b'<a href="https://hub.docker.com/repository/docker/acmp17/project1-amp">Visit DockerHub Project Repository</a>' in response.data
-    assert b'    </div> </body> </html>' in response.data
+    assert b'</div>' in response.data
+    assert b'</body>' in response.data
+    assert b'</html>' in response.data
 
 def test_docker_commands_list(client):
     """This confirms content in the docker commands list"""
@@ -46,7 +48,7 @@ def test_docker_commands_list(client):
             call on the command line to assemble an image.
             Then using docker build command users can automatically execute several command-line instructions
             successfully.
-            To see the docker images that you just created the command is "docker images" (or docker image ls).
+            To see the docker images that you just created the command is docker images (or docker image ls).
             Docker run lets you run the application on a computer that has docker and then you can push and pull the
             image onto the docker hub from the local repository and vice versa.</p>""" in response.data
 
