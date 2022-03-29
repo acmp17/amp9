@@ -21,7 +21,9 @@ def test_docker_page_content(client):
             They represent an application in its virtual environment during specific points in time.
             Images are like templates as base to build a container, which basically runs the image.</p>""" in response.data
     assert b'<a href="https://hub.docker.com/repository/docker/acmp17/project1-amp">Visit DockerHub Project Repository</a>' in response.data
-    assert b'    </div> </body> </html>' in response.data
+    assert b'</div>' in response.data
+    assert b'</body>' in response.data
+    assert b'</html>' in response.data
 
 def test_docker_commands_list(client):
     """This confirms content in the docker commands list"""
@@ -42,16 +44,16 @@ def test_docker_commands_list(client):
             <li>Docker pull <- pull images from docker hub repository</li>
         </ul>""" in response.data
     assert b'<h2>How to start A Project with Docker</h2>' in response.data
-    assert b"""<p>Firstly, Dockerfile is a text document that one needs to make in order to contain all the commands a user can
-            call on the command line to assemble an image.
-            Then using docker build command users can automatically execute several command-line instructions
-            successfully.
-            To see the docker images that you just created the command is "docker images" (or docker image ls).
-            Docker run lets you run the application on a computer that has docker and then you can push and pull the
-            image onto the docker hub from the local repository and vice versa.</p>""" in response.data
 
 def test_docker_start_list(client):
     """This tests the docker starter description"""
     response = client.get("/page2")
     assert response.status_code == 200
     assert b"<h2>How to start A Project with Docker</h2>" in response.data
+    assert b"""<p>Firstly, Dockerfile is a text document that one needs to make in order to contain all the commands a user can
+                call on the command line to assemble an image.
+                Then using docker build command users can automatically execute several command-line instructions
+                successfully.
+                To see the docker images that you just created the command is docker images (or docker image ls).
+                Docker run lets you run the application on a computer that has docker and then you can push and pull the
+                image onto the docker hub from the local repository and vice versa.</p>""" in response.data
