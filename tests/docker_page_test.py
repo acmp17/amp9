@@ -8,7 +8,7 @@ def test_docker_page_content(client):
     assert b"<h2>Docker</h2>" in response.data
     assert b"""<p>Docker is an open source containerization platform that lets developers package applications into containers.
             It helps build, run, and manage containers on servers and the cloud. It allows developers to take advantage
-            of Docker's methodologies to reduce the delay between writing code and running it in production. </p>""" in response.data
+            of Dockers methodologies to reduce the delay between writing code and running it in production. </p>""" in response.data
     assert b'<h2>Containers</h2>' in response.data
     assert b"""<p>A docker container is a virtualized environment that isolates an application and its dependencies into a
             self-contained unit that can run anywhere.
