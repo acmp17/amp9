@@ -49,6 +49,6 @@ def test_git_page_content(client):
             imported from repositories that are in the local server
             and the user can update and modify the contents in the file. After those changes are made, they can update
             the repository on the remote location. </p>
-             </div>
-             </body>
-             </html>""" in response.data
+    </div>
+    </body>
+    </html>""" in response.data
