@@ -13,7 +13,6 @@ def test_index_page_content(client):
     assert b'<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"' in response.data
     assert b'integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"' in response.data
     assert b'crossorigin="anonymous">' in response.data
-    assert b"""<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>""" in response.data
     assert b"""</head>
     <body>
     <h1>IS218-006 Building Web Applications</h1>
@@ -81,7 +80,6 @@ def test_index_page_content(client):
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
 
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
     <p>Alianna Panganiban is a New Jersey Institute Of Technology Student. Currently majoring in Computer Science,
         she is taking IS218 a Building Applications course. This website will be a guide to building web applications
         and provide tools in order to execute the code in a test bug free environment. New addition for Project 2:
