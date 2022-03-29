@@ -32,3 +32,54 @@ def test_index_page_content(client):
                 <a href="/page3"><img src="https://pandaprogrammer.com/wp-content/uploads/2020/11/python.jpg" class="d-block"
                                       alt="..."></a>
             </div>""" in response.data
+
+    assert b"""<div class="carousel-item">
+                <a href="/page4"><img
+                        src="https://image.slidesharecdn.com/ciandcdinenterprisescenario-160203045816/95/continuous-integration-and-continuous-deployment-in-enterprise-scenario-8-638.jpg?cb=1454475629"
+                        class="d-block" alt="..."></a>
+            </div>""" in response.data
+
+    assert b"""<div class="carousel-item">
+                <a href="/page5"><img
+                        src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_9424a42a223635fd4bbac68e393c1181/pylint.png"
+                        class="d-block" alt="..."></a>
+            </div>""" in response.data
+
+    assert b"""<div class="carousel-item">
+                <a href="/page6"><img
+                        src="http://2.bp.blogspot.com/_9kQQgQD35rY/ScqXDQeIoeI/AAAAAAAAAlc/uWnnQL0l-JQ/s400/arrangeActAssert.jpg"
+                        class="d-block" alt="..."></a>
+            </div>""" in response.data
+
+    assert b"""<div class="carousel-item">
+                <a href="/page7"><img
+                        src="https://simplesnippets.tech/wp-content/uploads/2018/03/java-introduction-to-Object-Oriented-Programming.jpg"
+                        class="d-block" alt="..."></a>
+            </div>""" in response.data
+
+    assert b"""<div class="carousel-item">
+                <a href="/page8"><img
+                        src="https://miro.medium.com/max/719/1*s0b7xHpy4AOhDA1ylPMGpw.png"
+                        class="d-block" alt="..."></a>
+            </div>""" in response.data
+
+    assert b"""<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>""" in response.data
+
+    assert b"""<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>""" in response.data
+
+    assert b"""<p>Alianna Panganiban is a New Jersey Institute Of Technology Student. Currently majoring in Computer Science,
+        she is taking IS218 a Building Applications course. This website will be a guide to building web applications
+        and provide tools in order to execute the code in a test bug free environment. New addition for Project 2:
+        Object Oriented Programming Principles and Examples </p>
+    </body>""" in response.data
