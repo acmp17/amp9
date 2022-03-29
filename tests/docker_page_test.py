@@ -51,9 +51,9 @@ def test_docker_start_list(client):
     assert response.status_code == 200
     assert b"<h2>How to start A Project with Docker</h2>" in response.data
     assert b"""<p>Firstly, Dockerfile is a text document that one needs to make in order to contain all the commands a user can
-                call on the command line to assemble an image.
-                Then using docker build command users can automatically execute several command-line instructions
-                successfully.
-                To see the docker images that you just created the command is docker images (or docker image ls).
-                Docker run lets you run the application on a computer that has docker and then you can push and pull the
-                image onto the docker hub from the local repository and vice versa.</p>""" in response.data
+            call on the command line to assemble an image.
+            Then using docker build command users can automatically execute several command-line instructions
+            successfully.
+            To see the docker images that you just created the command is docker images (or docker image ls).
+            Docker run lets you run the application on a computer that has docker and then you can push and pull the
+            image onto the docker hub from the local repository and vice versa.</p>""" in response.data
