@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Object Oriented Programming</title>
+    <title>OOPs</title>
 </head>
 <body>
+<h1>Object Oriented Programming</h1>
+<div class="text">
+    <p>class Calculator:
+        """ This is the default result property"""
+        result = 0
 
+        def add(self, value_1):
+        """ This is the add method"""
+        self.result = self.result + value_1
+        return self.result
+
+        def subtract(self, value_1):
+        """ This is the subtract method"""
+        self.result = self.result - value_1
+        return self.result
+
+        def get_result(self):
+        """ This is the get result method"""
+        return self.result</p>
+    <h2>Encapsulation</h2>
+    <p>restrict access to methods and variables that are inside the class. Modifications from outside of the class
+        cannot be made so to change the value we would have to use a setter function to take the value as a
+        parameter</p>
+    <h2>Inheritance</h2>
+    <p>Creating a class for using details in another existing class without modifying it. The new formed class would be
+        derived as a child class and the existing class as the parent class (base class). Method of the parent class is
+        called inside the child class</p>
+    <h2>Polymorphism</h2>
+    <p>Creating a common interface that takes any object and calls the object’s method. Each type can provide its own
+        independent implementation of this interface.</p>
+    <h2>Abstraction</h2>
+    <p>Hide the internal functionality of the function from the users. The users can interact with the basic
+        implementation, but the inner workings are hidden in order to reduce complexity.</p>
+</div>
 </body>
 </html>
